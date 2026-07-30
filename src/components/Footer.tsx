@@ -1,4 +1,4 @@
-import LogoElements from "../assets/logoElements.png";
+import LogoElements from "../assets/LogoElements.png";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 

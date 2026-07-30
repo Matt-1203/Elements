@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
-import LogoElements from "../assets/logoElements.png";
+import LogoElements from "../assets/LogoElements.png";
 
 const navItems = [
     { label: "HOME", path: "/" },
