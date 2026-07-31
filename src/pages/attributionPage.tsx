@@ -43,7 +43,7 @@ function AttributionPage() {
                 variant="body1"
                 sx={{ color: "#aaa", lineHeight: 1.8, maxWidth: "800px", mx: "auto", whiteSpace: 'pre-line' }}
               >
-                {"● Share - copy and redistribute the material in any medium or format for any purpose, even commercially.\n● Adapt - remix, transform, and build upon the material for any purpose, even commercially."}
+                {"● Share - copy and redistribute the material in any medium or format.\n● Adapt - remix, transform, and build upon the material."}
               </Typography>
               <Typography variant="h5" sx={{ fontWeight: 700, mb: 2, paddingTop: 4 }}>
                 Under the following terms:
@@ -52,7 +52,7 @@ function AttributionPage() {
                 variant="body1"
                 sx={{ color: "#aaa", lineHeight: 1.8, maxWidth: "800px", mx: "auto", whiteSpace: 'pre-line' }}
               >
-                {"● Attribution - You must give appropriate credit for use of material. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use."}
+                {"● Attribution - You must give appropriate credit for use of material."}
               </Typography>
               <Typography variant="h5" sx={{ fontWeight: 700, mb: 2, paddingTop: 4 }}>
                 In creation of this website:

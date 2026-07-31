@@ -7,7 +7,6 @@ import Logo from "../assets/LogoElements.png";
 import catOneImg from "../assets/CatalogueOne.jpg";
 import catTwoImg from "../assets/CatalogueTwo.jpg";
 import catThreeImg from "../assets/CatalogueThree.jpg";
-import BackgroundImage from "../assets/BackgroundImage.jpg";
 import DashboardHeader from "../components/Header";
 import DashboardFooter from "../components/Footer";
 import ElementsOne from "../utils/ElementsCatOne.pdf";
@@ -212,7 +211,7 @@ function ElementsPage() {
       {/* MAIN CONTENT (Hidden until images load) */}
       <Box
         component="main"
-        sx={{opacity: isLoading ? 0 : 1, transition: "opacity 0.5s ease-in-out", position: "relative", color: "#fff", minHeight: "100vh", backgroundImage: `url(${BackgroundImage})`, backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed", backgroundRepeat: "no-repeat"}}
+        sx={{opacity: isLoading ? 0 : 1, transition: "opacity 0.5s ease-in-out", position: "relative", color: "#fff", minHeight: "100vh", backgroundColor: "#181818"}}
       >
         <DashboardHeader />
 
