@@ -3,13 +3,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {Typography, Box, Container, Card, CardContent, CardMedia, CardActions, Button, Link, CircularProgress} from "@mui/material";
 import Grid from "@mui/material/Grid";
-import Logo from "../assets/LogoElements.png";
-import catOneImg from "../assets/catalogueHeaders/CatalogueOne.jpg";
-import catTwoImg from "../assets/catalogueHeaders/CatalogueTwo.jpg";
-import catThreeImg from "../assets/catalogueHeaders/CatalogueThree.jpg";
+import Logo from "../../assets/LogoElements.png";
+import catOneImg from "../../assets/catalogueHeaders/CatalogueOne.jpg";
+import catTwoImg from "../../assets/catalogueHeaders/CatalogueTwo.jpg";
+import catThreeImg from "../../assets/catalogueHeaders/CatalogueThree.jpg";
 import DashboardHeader from "../../components/Header";
 import DashboardFooter from "../../components/Footer";
-import ElementsOne from "../utils/ElementsCatOne.pdf";
+import ElementsOne from "../../utils/ElementsCatOne.pdf";
 
 gsap.registerPlugin(ScrollTrigger);
 

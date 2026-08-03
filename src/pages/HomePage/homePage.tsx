@@ -1,5 +1,5 @@
-import videoBg from '../assets/VideoBackground.mp4';
-import Logo from "../assets/LogoElements.png";
+import videoBg from '../../assets/VideoBackground.mp4';
+import Logo from "../../assets/LogoElements.png";
 import DashboardHeader from "../../components/Header";
 import DashboardFooter from "../../components/Footer";
 
