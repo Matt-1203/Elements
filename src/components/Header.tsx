@@ -21,9 +21,15 @@ const DashboardHeader = () => {
             </Box>
         <Box component="nav" sx={{ display: "flex", gap: "10" }}>
             {navItems.map((item) => {
-                const current = location.pathname.toLowerCase();
-                const target = item.path.toLowerCase();
-                const isActive = current === target;
+                var current = location.pathname.toLowerCase();
+                var target = item.path.toLowerCase();
+                if (current === "/") {
+                    current = "/home";
+                }
+                if  (target === "/") {
+                    target = "/home";
+                }
+                const isActive = current.includes(target);
                 return (
                     <Typography key={item.label} component="button" onClick={() => navigate(item.path)} sx={{ all: 'unset', cursor: 'pointer', fontSize: '0.875rem', fontWeight: 500, color: isActive? "white" : "#888", borderBottom: isActive? "2px solid white" : "none", pb: 0.5, transition: "0.2s, border-bottom 0.3s", padding: "0.5rem", '&:hover': { color: "white", borderBottom: "2px solid white" } }}>
                         {item.label}

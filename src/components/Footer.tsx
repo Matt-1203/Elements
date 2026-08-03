@@ -4,6 +4,21 @@ import { Button } from "@mui/material";
 
 const DashboardFooter = () => {
   const navigate = useNavigate();
+  function romanize (num: number) {
+    if (!+num)
+        return false;
+    var digits = String(+num).split(""),
+        key    = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+                  "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+                  "","I","II","III","IV","V","VI","VII","VIII","IX"],
+        roman  = "",
+        i      = 3;
+    while (i--) {
+        const currentDigit = digits.pop() ?? "0";
+        roman = (key[+currentDigit + (i * 10)] || "") + roman;
+    }
+    return Array(+digits.join("") + 1).join("M") + roman;
+  }
 
   return (
     <footer
@@ -12,7 +27,7 @@ const DashboardFooter = () => {
       {/*Text*/}
       <div style={{ display: "flex", alignItems: "center" }}>
         <span style={{ fontSize: "14px", fontWeight: 500, color: "#ffffff" }}>
-          Elements Photography//Season {new Date().getFullYear()}
+          Elements//{romanize(new Date().getFullYear())}
         </span>
       </div>
 

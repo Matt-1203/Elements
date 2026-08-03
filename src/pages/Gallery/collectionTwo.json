@@ -1,0 +1,76 @@
+{
+    "collectionTwo": [
+        {
+            "id": "1",
+            "src": "1.jpg",
+            "width": 800,
+            "height": 800,
+            "alt": "Flux",
+            "title": "Flux",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 24-105mm\nApeture: F8\nISO: 400\nShutter: 1/250s"
+        },
+        {
+            "id": "2",
+            "src": "2.jpg",
+            "width": 800,
+            "height": 1200,
+            "alt": "Momentum",
+            "title": "Momentum",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 24-105mm\nApeture: F8\nISO: 400\nShutter: 1/250s"
+        },
+        {
+            "id": "3",
+            "src": "3.jpg",
+            "width": 800,
+            "height": 1200,
+            "alt": "Head Fist",
+            "title": "Head First",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 150-600mm\nApeture: F8\nISO: 1000\nShutter: 1/400s"
+        },
+        {
+            "id": "4",
+            "src": "4.jpg",
+            "width": 1200,
+            "height": 1200,
+            "alt": "Feels Like I'm Watching",
+            "title": "Feels Like I'm Watching",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 150-600mm\nApeture: F8\nISO: 800\nShutter: 1/400s"
+        },
+        {
+            "id": "5",
+            "src": "5.jpg",
+            "width": 1200,
+            "height": 1200,
+            "alt": "Spectrum",
+            "title": "Spectrum",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 24-105mm\nApeture: F8\nISO: 400\nShutter: 1/250s"
+        },
+        {
+            "id": "6",
+            "src": "6.jpg",
+            "width": 1200,
+            "height": 800,
+            "alt": "Moor the Merrier",
+            "title": "Moor the Merrier",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 150-600mm\nApeture: F5.6\nISO: 1000\nShutter: 1/400s"
+        },
+        {
+            "id": "7",
+            "src": "7.jpg",
+            "width": 800,
+            "height": 800,
+            "alt": "Wingmen",
+            "title": "Wingmen",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 150-600mm\nApeture: F4\nISO: 2000\nShutter: 1/500s"
+        },
+        {
+            "id": "8",
+            "src": "8.jpg",
+            "width": 1200,
+            "height": 1200,
+            "alt": "Peckuliar Angle",
+            "title": "Peckuliar Angle",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 150-600mm\nApeture: F8\nISO: 200\nShutter: 1/250s"
+        }
+    ]
+}
