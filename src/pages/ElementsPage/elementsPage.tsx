@@ -221,11 +221,12 @@ function ElementsPage() {
                     variant="body1"
                     sx={{ color: "#aaa", lineHeight: 1.8, maxWidth: "800px", mx: "auto" }}
                   >
-                    Like building blocks, these core components are fundamental to the artistic and technical aspects in photography.  
-                    From exposure to focus systems. Macro to abstract. Both style and artistic preference require different components to make 
-                    our ideas appear on the lens. However, these components are and their application can be challenging.
+                    Like building blocks, these core components are fundamental to both artistic and technical aspects of photography.  
+                    From exposure to focus systems. Macro to abstract. Both style and artistic preference require various components to  
+                    to capture our ideas. However, understanding of these components and their application can be challenging.
                     Elements is a series of catalogues designed to help you understand core components across different photographic styles. 
-                    Through a combination of technical and artistic examples, you will learn how to manipulate the elements of photography to achieve your desired results.
+                    Through a combination of technical and artistic examples, the elements catalogues are designed to both present and
+                    explain. You can read them for free below.
                   </Typography>
                 </CardContent>
               </Card>
