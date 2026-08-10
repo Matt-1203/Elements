@@ -372,8 +372,8 @@
         {
             "id": "42",
             "src": "42.jpg",
-            "width": 1200,
-            "height": 800,
+            "width": 800,
+            "height": 1200,
             "alt": "Current Affairs",
             "title": "Current Affairs",
             "description": "Camera: Canon EOS 80D\nLens: 18-135mm\nApeture: F22\nISO: 100\nShutter: 30s"

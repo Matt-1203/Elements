@@ -12,8 +12,8 @@ const DashboardFooter = () => {
         key    = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
                   "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
                   "","I","II","III","IV","V","VI","VII","VIII","IX"],
-        roman  = "",
-        i      = 3;
+        roman = "",
+        i = 3;
     while (i--) {
         const currentDigit = digits.pop() ?? "0";
         roman = (key[+currentDigit + (i * 10)] || "") + roman;
@@ -22,17 +22,13 @@ const DashboardFooter = () => {
   }
 
   return (
-    <footer
-      style={{width: "100%", position: "fixed", bottom: 0, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: "16px 24px", backgroundColor: "#000000", color: "#ffffff", boxSizing: "border-box", zIndex: 1000}}
-    >
-      {/*Text*/}
+    <footer style={{width: "100%", position: "fixed", bottom: 0, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: "16px 24px", backgroundColor: "#000000", color: "#ffffff", boxSizing: "border-box", zIndex: 10000}}>
       <div style={{ display: "flex", alignItems: "center" }}>
         <span style={{ fontSize: "14px", fontWeight: 500, color: "#ffffff" }}>
           Elements//{romanize(new Date().getFullYear())}
         </span>
       </div>
 
-      {/*Logo*/}
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
         <section className = "footer-attribution">
           <Button size="small" sx={{color: "#fff", fontWeight: 500, p: 0, "&:hover": { color: "#aaa" },}}
