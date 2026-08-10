@@ -145,8 +145,8 @@ function ElementsPage() {
       <Box component="main" sx={{opacity: isLoading ? 0 : 1, transition: "opacity 0.5s ease-in-out", position: "relative", color: "#fff", minHeight: "100vh", backgroundColor: "#181818"}}>
         <DashboardHeader />
         {/* SECTION 1 */}
-        <Box ref={heroSectionRef} sx={{position: "relative", width: "100%", height: "100vh", zIndex: 1}}>
-          <canvas ref={heroCanvasRef} style={{width: "100%", height: "auto", objectFit: "cover", display: "block"}}/>
+        <Box ref={heroSectionRef} sx={{position: "relative", width: "100vw", maxWidth: "100%", height: "100vh", overflow: "hidden", zIndex: 1}}>
+          <canvas ref={heroCanvasRef} style={{width: "100%", maxWidth: "100%", height: "100%", objectFit: "cover", display: "block"}}/>
         </Box>
 
         {/* SECTION 2 */}
