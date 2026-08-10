@@ -34,7 +34,7 @@ const DashboardFooter = () => {
 
       {/*Logo*/}
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <section className = "attribution">
+        <section className = "footer-attribution">
           <Button size="small" sx={{color: "#fff", fontWeight: 500, p: 0, "&:hover": { color: "#aaa" },}}
           onClick={() => navigate("/attribution")}>
               VIEW ATTRIBUTION

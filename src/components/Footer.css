@@ -1,10 +1,10 @@
-.attribution {
+.footer-attribution {
     display: block;
     pointer-events: auto;
 }
 
 @media (max-width: 600px) {
-     .attribution {
+     .footer-attribution {
         display: none;
   }
 }
