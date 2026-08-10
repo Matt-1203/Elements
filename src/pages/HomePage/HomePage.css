@@ -66,6 +66,15 @@
   font-weight: bold;
 }
 
+.attribution {
+  display: none;
+}
+
+.button {
+  color: #fff;
+  font-weight: 500;
+}
+
 .footer {
   position: relative;
   width: 100%;
@@ -92,7 +101,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .content {
     padding: 1rem;
   }
@@ -101,28 +110,18 @@
     margin-bottom: 1rem;
   }
   .content h1 {
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     max-width: 100%;
   }
   .content p {
     font-size: 0.8rem;
   }
-}
-
-
-@media (max-width: 768px) and (orientation: landscape) {
-  .content {
-    padding: 0.5rem 1rem;
-  }
-  .logo {
-    width: 70px;
-    margin-bottom: 0.5rem;
-  }
-  .content h1 {
-    font-size: 1.4rem;
-  }
-  .content p {
-    margin-top: 0.4rem;
-    font-size: 0.75rem;
+  .attribution {
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    z-index: 11;
+    pointer-events: auto;
   }
 }

@@ -1,6 +1,7 @@
 import LogoElements from "../assets/LogoElements.png";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import "./Footer.css"
 
 const DashboardFooter = () => {
   const navigate = useNavigate();
@@ -33,10 +34,12 @@ const DashboardFooter = () => {
 
       {/*Logo*/}
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <Button size="small" sx={{color: "#fff", fontWeight: 500, p: 0, "&:hover": { color: "#aaa" },}}
-        onClick={() => navigate("/attribution")}>
-            VIEW ATTRIBUTION
-        </Button>
+        <section className = "attribution">
+          <Button size="small" sx={{color: "#fff", fontWeight: 500, p: 0, "&:hover": { color: "#aaa" },}}
+          onClick={() => navigate("/attribution")}>
+              VIEW ATTRIBUTION
+          </Button>
+        </section>
         <img
           src={LogoElements}
           alt="Logo"
