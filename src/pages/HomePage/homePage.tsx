@@ -29,7 +29,7 @@ const HomePage = () => {
       <section className="attribution">
         <Button className="button" size="small" sx={{color: "#fff", "&:hover": { color: "#aaa" },}}
         onClick={() => navigate("/attribution")}>
-            VIEW ATTRIBUTION
+            ATTRIBUTION
         </Button>
       </section>
 

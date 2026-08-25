@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 import type { Photo } from "react-photo-album";
@@ -9,6 +9,7 @@ import DashboardHeader from "../../components/Header";
 import DashboardFooter from "../../components/Footer";
 import collectionOne from "./collectionOne.json";
 import collectionTwo from "./collectionTwo.json";
+import "../ElementsPage/ElementsPage.css";
 
 // Define the GalleryImage interface to represent the structure of each image in the gallery
 export interface GalleryImage {
@@ -87,8 +88,19 @@ function GalleryPage() {
   );
   const [selected, setSelected] = useState<GalleryImage | null>(null);
 
+  //Hide the scrollbar in the webpage whilst keeping scroll functionality
+  useEffect(() => {
+    document.documentElement.classList.add("scrollbar-hide");
+    document.body.classList.add("scrollbar-hide");
+
+    return () => {
+      document.documentElement.classList.remove("scrollbar-hide");
+      document.body.classList.remove("scrollbar-hide");
+    };
+  }, []);
+
   return (
-    <main className="gallery-page">
+    <main className="gallery-page scrollbar-hide">
       <DashboardHeader />
           <MasonryPhotoAlbum
             photos={photos}

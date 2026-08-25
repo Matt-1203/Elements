@@ -1,5 +1,4 @@
 import "./galleryModal.css";
-import LogoElements from "../../assets/LogoElements.png";
 import type { GalleryImage } from "./galleryPage";
 
 interface Props {
@@ -22,10 +21,6 @@ export default function GalleryModal({ image, onClose }: Props) {
         <div className="modal-content" style={{ whiteSpace: "pre-line" }}>
           <h2>{image.title}</h2>
           <p>{image.description}</p>
-        </div>
-
-        <div className="modal-logo">
-          <img src={LogoElements} alt="Logo" />
         </div>
       </div>
     </div>

@@ -170,8 +170,8 @@
   }
 
   .close-button {
-    top: 8px;
-    right: 10px;
+    top: 20px;
+    right: 15px;
     width: 42px;
     height: 42px;
     display: flex;
