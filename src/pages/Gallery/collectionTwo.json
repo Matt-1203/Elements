@@ -14,9 +14,9 @@
             "src": "2.jpg",
             "width": 800,
             "height": 1200,
-            "alt": "Momentum",
-            "title": "Momentum",
-            "description": "Camera: Canon EOS 5D Mk3\nLens: 24-105mm\nApeture: F8\nISO: 400\nShutter: 1/250s"
+            "alt": "High up in the Mountains",
+            "title": "High up in the Mountains",
+            "description": "Camera: Canon EOS 5D Mk3\nLens: 24-105mm\nApeture: F11\nISO: 200\nShutter: 1/125s"
         },
         {
             "id": "3",
@@ -67,7 +67,7 @@
             "id": "8",
             "src": "8.jpg",
             "width": 1200,
-            "height": 1200,
+            "height": 800,
             "alt": "Peckuliar Angle",
             "title": "Peckuliar Angle",
             "description": "Camera: Canon EOS 5D Mk3\nLens: 150-600mm\nApeture: F8\nISO: 200\nShutter: 1/250s"

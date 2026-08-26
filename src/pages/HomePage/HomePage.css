@@ -21,7 +21,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -64,10 +64,6 @@
   margin: 1rem 0 0;
   font-size: clamp(0.85rem, 2vw, 1rem);
   font-weight: bold;
-}
-
-.attribution {
-  display: none;
 }
 
 .button {
@@ -115,13 +111,5 @@
   }
   .content p {
     font-size: 0.8rem;
-  }
-  .attribution {
-    display: block;
-    position: absolute;
-    bottom: 100px;
-    right: 20px;
-    z-index: 11;
-    pointer-events: auto;
   }
 }

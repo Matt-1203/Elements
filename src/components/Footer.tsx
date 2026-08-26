@@ -1,10 +1,6 @@
 import LogoElements from "../assets/LogoElements.png";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
-import "./Footer.css"
 
 const DashboardFooter = () => {
-  const navigate = useNavigate();
   function romanize (num: number) {
     if (!+num)
         return false;
@@ -30,12 +26,6 @@ const DashboardFooter = () => {
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <section className = "footer-attribution">
-          <Button size="small" sx={{color: "#fff", fontWeight: 500, p: 0, "&:hover": { color: "#aaa" },}}
-          onClick={() => navigate("/attribution")}>
-              ATTRIBUTION
-          </Button>
-        </section>
         <img
           src={LogoElements}
           alt="Logo"
