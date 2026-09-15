@@ -19,8 +19,8 @@ const HomePage = () => {
       {/* Main content */}
       <section className="content">
         <img src={Logo} alt="Photography Elements"className="logo"/>
-        <h1>PHOTOGRAPHY//ELEMENTS</h1>
-        <p>Matthew Taylor</p>
+        <h1>ELEMENTS//PHOTOGRAPHY</h1>
+        <p>MATTHEW TAYLOR</p>
       </section>
 
       {/* Footer */}
