@@ -1,0 +1,9 @@
+.view-more-button {
+  color: #fff !important;
+  font-weight: 500 !important;
+  padding: 0 !important;
+}
+
+.view-more-button:hover {
+  color: #aaa !important;
+}

@@ -120,6 +120,7 @@ body {
 .hero-section {
   position: relative;
   width: 100vw;
+  height: 100vh;
   margin-left: calc(-50vw + 50%);
   isolation: isolate;
   overflow: hidden;

@@ -6,6 +6,7 @@ export default function Carousel() {
   return (
     <div className="App">
       <DashboardHeader />
+      <div style = {{paddingTop: "4rem"}}></div>
       <HeroBanner />
       <DashboardFooter />
     </div>

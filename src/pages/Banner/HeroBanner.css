@@ -1,0 +1,45 @@
+.carousel-frame {
+  position: relative;
+  overflow: hidden;
+  background: #000000;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
+  transform: translateX(-50%);
+}
+
+.pagination-button {
+  width: 1.5rem;
+  height: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: #555;
+  cursor: pointer;
+  transition: width 300ms ease, background 300ms ease;
+}
+
+.pagination-button[data-active="true"] {
+  width: 2.75rem;
+  background: #fff;
+}
+
+.pagination-button:hover {
+  background: #fff;
+}
