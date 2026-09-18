@@ -6,7 +6,7 @@ import DashboardFooter from "../../components/Footer";
 import SouthEastIcon from '@mui/icons-material/SouthEast';
 import SouthWestIcon from '@mui/icons-material/SouthWest';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import LogoBW from "../../assets/logoElementsBW.png";
+import LogoBW from "../../assets/LogoElementsBW.png";
 
 import One from "../../assets/collectionOneGallery/1.jpg"
 import Two from "../../assets/collectionOneGallery/2.jpg"
