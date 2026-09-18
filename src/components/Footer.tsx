@@ -1,4 +1,7 @@
-import LogoElements from "../assets/LogoElements.png";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import IconButton from '@mui/material/IconButton';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const DashboardFooter = () => {
   function romanize (num: number) {
@@ -17,6 +20,17 @@ const DashboardFooter = () => {
     return Array(+digits.join("") + 1).join("M") + roman;
   }
 
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#ffffff',
+      },
+      secondary: {
+        main: '#ffffff',
+      },
+    },
+  });
+
   return (
     <footer style={{width: "100%", position: "fixed", bottom: 0, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: "16px 24px", backgroundColor: "#000000", color: "#ffffff", boxSizing: "border-box", zIndex: 100000}}>
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -26,11 +40,14 @@ const DashboardFooter = () => {
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <img
-          src={LogoElements}
-          alt="Logo"
-          style={{ width: 40, height: "auto", display: "block" }}
-        />
+        <ThemeProvider theme={theme}>
+          <IconButton color="primary"  onClick={() => window.open("https://www.instagram.com/matt._taylor._/")}>
+            <InstagramIcon/>
+          </IconButton>
+          <IconButton color="primary" onClick={() => window.open("https://github.com/Matt-1203")}>
+            <GitHubIcon/>
+          </IconButton>
+        </ThemeProvider>
       </div>
     </footer>
   );

@@ -202,11 +202,11 @@ export const ElementsPage: React.FC = () => {
             <div className="about-text-overlay">
               <p>
                 Like building blocks, these core components are fundamental to both artistic and technical aspects of photography.  
-                From exposure to focus systems. Macro to abstract. Both style and artistic preference require various components to  
-                to capture our ideas. However, understanding of these components and their application can be challenging.
+                From exposure to focus systems. Macro to abstract. Both style and artistic preference require various factors to  
+                to capture our ideas. However, understanding of these factors and their application can be challenging.
                 Elements is a series of catalogues designed to help you understand core components across different photographic styles. 
                 Through a combination of technical and artistic examples, the elements catalogues are designed to both present and
-                explain core photographic components across varying styles.
+                explain key factors to develop your photography further.
               </p>
             </div>
           </div>

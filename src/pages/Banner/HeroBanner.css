@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   background: #000000;
+  touch-action: pan-y;
 }
 
 .slide-track {

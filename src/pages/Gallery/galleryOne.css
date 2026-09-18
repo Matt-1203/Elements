@@ -1,0 +1,611 @@
+/* BASE SYSTEM CONFIGURATION */
+:root {
+  --bg-black: #000000;
+  --bg-white: #ffffff;
+  --text-dark: #111111;
+  --text-light: #f5f5f5;
+  --text-muted: #777777;
+  --accent-orange: #d87d4a;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-black);
+  color: var(--text-light);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.portfolio-horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: none;
+  touch-action: pan-x;
+  cursor: grab;
+}
+
+.portfolio-horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-carousel {
+  position: relative;
+  padding-top: 70px;
+}
+
+.portfolio-horizontal-scroll:active {
+  cursor: grabbing;
+}
+
+.portfolio-card {
+  scroll-snap-align: center;
+  opacity: 0.48;
+  transform: scale(0.9);
+  transform-origin: center top;
+  transition: opacity 400ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1), filter 400ms ease;
+  filter: saturate(0.55);
+  cursor: pointer;
+}
+
+.portfolio-card-image img {
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.portfolio-card.is-active .portfolio-card-image img {
+  transform: scale(1.03);
+}
+
+.portfolio-card.is-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: saturate(1);
+  z-index: 1;
+}
+
+.portfolio-pagination {
+  position: relative;
+  z-index: 1;
+  min-height: 2rem;
+}
+
+.portfolio-pagination button {
+  width: 1.5rem;
+  height: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: #333;
+  cursor: pointer;
+  transition: width 300ms ease, background 300ms ease;
+}
+
+.portfolio-pagination button:hover,
+.portfolio-pagination button.is-active {
+  background: #fff;
+}
+
+.portfolio-pagination button.is-active {
+  width: 2.75rem;
+}
+
+.gallery-app-root {
+  width: 100%;
+  background-color: var(--bg-black);
+}
+
+/* SECTION CONTAINER TYPES */
+.black-section {
+  background-color: var(--bg-black);
+  color: var(--text-light);
+  padding: 80px 24px;
+}
+
+.white-section-overlay {
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  padding: 40px 24px;
+  margin: 0 auto;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.gallery-display-title {
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-weight: 200;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+
+/* 1. GALLERY HEADER & HERO */
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 20px;
+}
+
+.gallery-logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.gallery-mini-preview {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.gallery-mini-preview img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.gallery-nav-links {
+  display: flex;
+  gap: 12px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.gallery-hero-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 40px 0;
+}
+
+.gallery-hero-intro p {
+  max-width: 400px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.gallery-hero-banner img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-hero-banner {
+  position: relative;
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  color: var(--bg-white);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 55%, rgba(0, 0, 0, 0.55));
+}
+
+.gallery-hero-overlay-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.gallery-hero-overlay p {
+  max-width: 480px;
+  margin: 0;
+  font-size: clamp(1.25rem, 3vw, 2.5rem);
+  line-height: 1.1;
+}
+
+/* 2. GALLERY STUDIO STATEMENT */
+.gallery-studio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  position: relative;
+}
+
+.body-copy {
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.stat-box {
+  margin-top: 60px;
+}
+
+.stat-num {
+  font-size: 4rem;
+  font-weight: 300;
+  display: block;
+}
+
+.stat-icon {
+  position: absolute;
+  bottom: 0;
+  right: 55%;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.card-media img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.media-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* 3. BRUTALIST GALLERY HERO */
+.gallery-split-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr 300px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-black-block {
+  background-color: var(--bg-black);
+  color: var(--bg-white);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.gallery-hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-hero-text-wrap {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-white);
+}
+
+.gallery-hero-text-wrap p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.gallery-btn {
+  background-color: var(--bg-black);
+  color: var(--bg-white);
+  border: none;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.gallery-btn .btn-arrow {
+  color: var(--bg-white);
+  padding: 4px 12px;
+  margin-right: -24px;
+}
+
+/* 4. SERVICES ROW */
+.service-row {
+  border-top: 1px solid #e5e5e5;
+  padding: 32px 0;
+}
+
+.service-row-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.service-row-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 1.6fr);
+  gap: 32px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.service-row-reversed .service-row-content {
+  grid-template-columns: minmax(360px, 1.6fr) minmax(0, 1fr);
+}
+
+.service-row-reversed .service-media {
+  order: -1;
+}
+
+.service-media {
+  width: 100%;
+}
+
+.service-text-left h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  height: 100%;
+  position: relative;
+  line-height: 1.1;
+}
+
+.service-category {
+  display: block;
+  margin: 0 0 12px 0;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.service-media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  animation: service-image-enter 700ms ease both;
+}
+
+.service-image-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 10px 0 0;
+}
+
+.service-image-title {
+  margin: 0;
+  color: #666666;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  animation: service-caption-enter 700ms ease both;
+}
+
+.service-image-dots {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+}
+
+.service-image-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.service-image-dots button.is-active {
+  background: #000;
+}
+
+@keyframes service-image-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes service-caption-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-media img,
+  .service-image-title {
+    animation: none;
+  }
+}
+
+/* 5. GALLERY MAIN GRID */
+.gallery-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  position: relative;
+}
+
+.gallery-logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 52%;
+  left: 0;
+}
+
+.gallery-arrow-icon {
+  position: absolute;
+  bottom: 50%;
+  right: 60%;
+}
+
+.gallery-subtitle {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.gallery-grid-right img, .gallery-grid-bottom-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-grid-bottom-left, .gallery-grid-bottom-right {
+  height: 520px;
+}
+
+.gallery-grid-bottom-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gallery-grid-bottom-right img {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.gallery-cta-card {
+  background-color: var(--bg-black);
+  color: var(--bg-white);
+  padding: 32px;
+}
+
+.gallery-cta-card h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+/* 6. FRAGMENTS GRID */
+.fragments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.fragment-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.fragment-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.fragment-square-card {
+  grid-column: 1 / -1;
+}
+
+.fragment-square-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.gallery-footer {
+  border-top: 1px solid #222;
+  margin-top: 80px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.gallery-logo-large {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .gallery-split-layout {
+    grid-template-columns: 1fr;
+  }
+  .gallery-studio-grid, .service-row-content, .gallery-grid-container, .fragments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row-reversed .service-row-content {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row-reversed .service-media {
+    order: 0;
+  }
+
+  .service-media img {
+    height: 320px;
+  }
+
+  .stat-icon {
+    position: absolute;
+    bottom: 60%;
+    right: 0;
+  }
+
+  .gallery-btn-spacer {
+    padding-top: 50px;
+  }
+
+  .gallery-logo {
+    width: 0px;
+    height: 0px;
+  }
+}

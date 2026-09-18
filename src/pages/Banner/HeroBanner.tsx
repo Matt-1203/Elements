@@ -29,10 +29,13 @@ const coverData: BannerData[] = [
 const HeroBanner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const lastWheelTime = useRef(0);
+  const touchStartX = useRef<number | null>(null);
+
   // Function to select a slide based on the index, ensuring it stays within bounds
   const selectSlide = (index: number) => {
     setActiveIndex(Math.max(0, Math.min(index, coverData.length - 1)));
   };
+
   // Function to handle wheel events for slide navigation, preventing rapid changes
   const handleWheel = (event: React.WheelEvent<HTMLElement>) => {
     if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
@@ -44,8 +47,31 @@ const HeroBanner = () => {
     selectSlide(activeIndex + (event.deltaY > 0 ? 1 : -1));
   };
 
+  const handleTouchStart = (event: React.TouchEvent<HTMLElement>) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLElement>) => {
+    if (touchStartX.current === null) return;
+
+    const touchEndX = event.changedTouches[0].clientX;
+    const deltaX = touchEndX - touchStartX.current;
+
+    if (Math.abs(deltaX) > 50) {
+      selectSlide(activeIndex + (deltaX < 0 ? 1 : -1));
+    }
+
+    touchStartX.current = null;
+  };
+
   return (
-    <section className="carousel-frame" onWheel={handleWheel} aria-label="Collection carousel">
+    <section
+      className="carousel-frame"
+      onWheel={handleWheel}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      aria-label="Collection carousel"
+    >
       <div className="slide-track" style={{ transform: `translateX(${activeIndex * -100}%)` }}>
         {coverData.map((item, index) => (
           <div className="slide" key={`${item.title}-${index}`} aria-hidden={activeIndex !== index}>
