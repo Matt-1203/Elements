@@ -180,7 +180,7 @@ const SERVICE_ITEMS = [
   },
   {
     tag: '//02',
-    title: 'THROUGH MANCHESTER',
+    title: 'MANCHESTER',
     category: '[02/URBAN PHOTOGRAPHY]',
     text: 'Notable for thier use of symmetry and leading lines, these images highlight some of the manmade structures around Manchester. The contrast of deep blues, reds and purples adds to the scene and highlights are harder, symmetric side to urban photography.',
     images: [

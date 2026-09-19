@@ -51,9 +51,11 @@
   justify-content: center;
   width: 100%;
   padding: 2rem;
-  box-sizing: border-box;
   color: white;
   text-align: center;
+  border: none;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 .logo {
@@ -80,12 +82,6 @@
   font-weight: 500;
 }
 
-.footer {
-  position: relative;
-  width: 100%;
-  z-index: 10;
-  flex-shrink: 0;
-}
 
 
 @media (max-width: 768px) {

@@ -24,9 +24,7 @@ const HomePage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        <DashboardFooter />
-      </footer>
+      <DashboardFooter />
     </main>
   );
 };
