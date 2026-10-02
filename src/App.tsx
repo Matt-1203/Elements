@@ -1,8 +1,8 @@
 import HomePage from "./pages/HomePage/homePage";
 import ElementsPage from "./pages/ElementsPage/elementsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import GalleryOne from "./pages/Gallery/galleryPage";
-import GalleryOneM from "./pages/Gallery/galleryOne"
+import GalleryOne from "./pages/Gallery/galleryOne"
+import GalleryTwo from "./pages/Gallery/galleryTwo"
 import Carousel from "./pages/Banner/Carousel";
 
 export default function App() {
@@ -12,9 +12,8 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/elements" element={<ElementsPage />} />
         <Route path="/gallery" element={<Carousel />} />
-        <Route path="/gallery/collection-one-migration" element={<GalleryOneM />} />
         <Route path="/gallery/collection-one" element={<GalleryOne />} />
-        <Route path="/gallery/collection-two" element={<GalleryOne />} />
+        <Route path="/gallery/collection-two" element={<GalleryTwo />} />
       </Routes>
     </BrowserRouter>
   );

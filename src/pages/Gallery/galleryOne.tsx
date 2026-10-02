@@ -1,4 +1,4 @@
-import './galleryOne.css';
+import './gallery.css';
 import { Box, Typography } from '@mui/material';
 import React, { useEffect, useRef, useState } from 'react';
 import DashboardHeader from "../../components/Header";
@@ -171,7 +171,7 @@ const SERVICE_ITEMS = [
     tag: '//01',
     title: 'NATURE CLOSE UP',
     category: '[01/NATURE PHOTOGRAPHY]',
-    text: 'These images are notable for thier use of lines and curves in shaping the scene. The difference in colour between foreground and background make you pay close attention to these curves, leading you up the scene.',
+    text: 'These works are distinguished by their use of line and curvature to shape the composition. The contrast between foreground and background directs attention upward through the frame, reinforcing a strong sense of movement and depth.',
     images: [
       { src: Five, title: 'Morning Dew' },
       { src: Nineteen, title: 'Headfirst' },
@@ -182,7 +182,7 @@ const SERVICE_ITEMS = [
     tag: '//02',
     title: 'MANCHESTER',
     category: '[02/URBAN PHOTOGRAPHY]',
-    text: 'Notable for thier use of symmetry and leading lines, these images highlight some of the manmade structures around Manchester. The contrast of deep blues, reds and purples adds to the scene and highlights are harder, symmetric side to urban photography.',
+    text: 'Characterised by symmetry and directional structure, these images examine the built environment across Manchester. The use of deep blues, reds, and purples heightens the contrast, creating a more formal and ordered urban aesthetic.',
     images: [
       { src: Four, title: 'Motion' },
       { src: ThirtyFour, title: 'Symmetric Systems' },
@@ -193,7 +193,7 @@ const SERVICE_ITEMS = [
     tag: '//03',
     title: 'LIGHT & MOTION',
     category: '[03/ABSTRACT & MINIMALISM]',
-    text: 'These images are some of my favourties from this collection. The use of shades and colours really makes these images stand out. There is no true subject to these images, the subject is the image itself. This lack of meaning and features give a abstract and minimalist impression.',
+    text: 'These studies are among the collection’s strongest examples of abstraction and minimalism. The emphasis on tone, colour, and texture removes clear subject definition, allowing the image itself to become the focus of the work.',
     images: [
       { src: Fourteen, title: 'Against the Tide' },
       { src: ThirtySix, title: 'Into Troubled Waters' },
@@ -202,7 +202,7 @@ const SERVICE_ITEMS = [
   },
 ];
 
-export const GalleryOneM: React.FC = () => {
+export const GalleryOne: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [serviceImageIndexes, setServiceImageIndexes] = useState(() => SERVICE_ITEMS.map(() => 0));
   const portfolioRef = useRef<HTMLDivElement>(null);
@@ -281,7 +281,7 @@ export const GalleryOneM: React.FC = () => {
               <span>COLLECTION ONE</span>
               <span>MMXXIV-MMXXVI</span>
             </div>
-            <p>A development of photographic techniques and technical learning.</p>
+            <p>A progression in photographic technique and technical development.</p>
           </div>
         </div>
       </section>
@@ -294,7 +294,7 @@ export const GalleryOneM: React.FC = () => {
 
           <div className="gallery-studio-grid">
             <div className="studio-col-left">
-              <p className="body-copy">This collection showcases the highlights of the images taken during the first three years of photography. Focus is on exploration, going around areas Lancashire to find interesting photographic themes. Both colour and clarity were two main focal points in this collection and was a cornerstone of development during these three years.</p>
+              <p className="body-copy">This collection presents a selection of images from the first three years of photographic study, with emphasis on exploration across Lancashire and the identification of recurring visual themes. Colour and clarity were central considerations throughout the series and remain defining qualities of the work.</p>
               <div className="stat-box">
                 <span className="stat-num">45+</span>
                 <span className="stat-label">PHOTOGRAPHS</span>
@@ -327,7 +327,7 @@ export const GalleryOneM: React.FC = () => {
             <img src={Six} alt="Gallery Visitors" />
           </div>
           <div className="gallery-hero-text-wrap">
-            <p>Used extensively throughout my Elements catalogues, we have multiple collections of images featuring those found in the catalogues and beyond. Browse the other collections below.</p>
+            <p>Extensively represented across the Elements catalogue series, this selection includes works drawn from the catalogues and related studies. Explore the additional collections below.</p>
             <div className="gallery-btn-spacer"/>
             <button className="gallery-btn">
               <span>CATALOGUES</span>
@@ -342,7 +342,7 @@ export const GalleryOneM: React.FC = () => {
         <div className="gallery-container">
           <div className="section-tag">// COLLECTION FEATURES</div>
           <h2 className="gallery-display-title">EVERYTHING HAS ITS WONDERS.</h2>
-          <p className="gallery-intro-sub">Finding interesting scenes in the everyday is one of the best parts of photography. From bridges to moss, everything has its wonders if you pay close attention. These feature my highlights of lanscape photography from this collection.</p>
+          <p className="gallery-intro-sub">Compelling imagery can often be found in the everyday. From bridges to moss, subtle detail and structure reveal themselves through close observation. This section highlights the strongest landscape studies from the collection.</p>
           <div style={{padding: "10px"}} />
           <div className="services-list">
             {SERVICE_ITEMS.map((item, idx) => {
@@ -410,7 +410,7 @@ export const GalleryOneM: React.FC = () => {
           <div className="gallery-grid-left">
             <h2 className="gallery-subtitle">The Animal Kingdom</h2>
             <div style={{paddingTop: "3rem"}}></div>
-            <p className="gallery-body">Other notable images in this collection are those of animals. It was a challenge I set when I started to seek out as many of these as possible and still continue to this day some notable favorites are the Kingfisher, Spoonbill and Lemurs.</p>
+            <p className="gallery-body">Animal studies form an important part of the collection, reflecting an ongoing interest in observational photography and species documentation. Notable examples include the Kingfisher, Spoonbill, and Lemurs.</p>
           </div>
           <div className="gallery-grid-right">
             <img src={TwentyEight} alt="Main Exhibition Room" />
@@ -423,7 +423,7 @@ export const GalleryOneM: React.FC = () => {
             <img src={ThirtyThree} alt="Exhibition Hallway" />
             <div className="gallery-cta-card">
               <h3>LONG EXPOSURE</h3>
-              <p>Another notable favourite this year was images of waterfalls. The image above is one of my favourites, taken in the Peak district.</p>
+              <p>Waterfall studies were another significant focus within this body of work. The image above is a representative example, captured in the Peak District.</p>
             </div>
           </div>
         </div>
@@ -435,7 +435,7 @@ export const GalleryOneM: React.FC = () => {
           <div className="section-tag">//WATER EXHIBITIONS</div>
           <div className="fragments-header">
             <h2 className="gallery-display-title">Fragments of Stillness.</h2>
-            <p className="fragments-intro">Water itself was a big factor in this collection. These images are all of various water bodies taken at long exposures.</p>
+            <p className="fragments-intro">Water is a recurring subject within this collection, with a series of long-exposure studies exploring different bodies of water and their reflective qualities.</p>
           </div>
 
           <div className="fragments-grid">
@@ -507,4 +507,4 @@ export const GalleryOneM: React.FC = () => {
   );
 };
 
-export default GalleryOneM;
+export default GalleryOne;
