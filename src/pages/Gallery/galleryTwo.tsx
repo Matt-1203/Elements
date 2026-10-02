@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import DashboardHeader from "../../components/Header";
 import DashboardFooter from "../../components/Footer";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 import One from "../../assets/collectionTwoGallery/1.jpg"
 import Two from "../../assets/collectionTwoGallery/2.jpg"
@@ -56,16 +57,13 @@ const GALLERY_CARDS: GalleryCard[] = [
     image: Nine,
   },
   {
-    title: 'Horizon',
-    image: Ten,
-  },
-  {
     title: 'In Flight',
     image: Eleven,
   },
 ];
 
 export const GalleryTwo: React.FC = () => {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
   const portfolioRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -135,8 +133,29 @@ export const GalleryTwo: React.FC = () => {
         </div>
       </section>
 
-      
-    <section className="black-section">
+      {/* SECTION 2 */}
+      <section className="white-section-overlay brutalist-gallery-hero">
+        <div className="gallery-split-layout">
+          <div className="gallery-black-block">
+            <h1 className="gallery-title">
+              THE ELEMENTS<br />SETS
+            </h1>
+          </div>
+          <div className="gallery-hero-image-wrap">
+            <img src={Ten} alt="Gallery Visitors" />
+          </div>
+          <div className="gallery-hero-text-wrap">
+            <p>Extensively represented across the Elements catalogue series, this selection includes works drawn from the catalogues and related studies. Explore the additional collections below.</p>
+            <div className="gallery-btn-spacer"/>
+            <button className="gallery-btn" onClick={() => navigate('/gallery')}>
+              <span>CATALOGUES</span>
+              <span className="btn-arrow">›</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="black-section">
         <div className="gallery-container">
         {/* Horizontal Scroll Track */}
         <Box className="portfolio-carousel" role="region" aria-label="Portfolio projects">

@@ -7,6 +7,7 @@ import SouthEastIcon from '@mui/icons-material/SouthEast';
 import SouthWestIcon from '@mui/icons-material/SouthWest';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import LogoBW from "../../assets/LogoElementsBW.png";
+import { useNavigate } from 'react-router-dom';
 
 import One from "../../assets/collectionOneGallery/1.jpg"
 import Two from "../../assets/collectionOneGallery/2.jpg"
@@ -203,6 +204,7 @@ const SERVICE_ITEMS = [
 ];
 
 export const GalleryOne: React.FC = () => {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
   const [serviceImageIndexes, setServiceImageIndexes] = useState(() => SERVICE_ITEMS.map(() => 0));
   const portfolioRef = useRef<HTMLDivElement>(null);
@@ -329,7 +331,7 @@ export const GalleryOne: React.FC = () => {
           <div className="gallery-hero-text-wrap">
             <p>Extensively represented across the Elements catalogue series, this selection includes works drawn from the catalogues and related studies. Explore the additional collections below.</p>
             <div className="gallery-btn-spacer"/>
-            <button className="gallery-btn">
+            <button className="gallery-btn" onClick={() => navigate('/gallery')}>
               <span>CATALOGUES</span>
               <span className="btn-arrow">›</span>
             </button>
